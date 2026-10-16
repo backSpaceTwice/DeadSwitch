@@ -1,3 +1,11 @@
 spring:
   application:
     name: DeadSwitch
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5434/deadswitch}
+    username: ${DATABASE_USER:deadswitch}
+    password: ${DATABASE_PASSWORD:deadswitch}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
